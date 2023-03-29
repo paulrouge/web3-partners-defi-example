@@ -19,4 +19,4 @@ create_new_wallet()
 You will be asked a password and a name for the keystore file. The keystore file will be saved in the wallets directory.
 
 
-more info on the icon-sdk: (https://docs.icon.community/icon-stack/client-apis/python-sdk)[https://docs.icon.community/icon-stack/client-apis/python-sdk]
+more info on the icon-sdk: https://docs.icon.community/icon-stack/client-apis/python-sdk
