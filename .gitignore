@@ -1,0 +1,4 @@
+# ignore all files in /wallets except .keep
+/wallets/*
+
+!/wallets/.keep
