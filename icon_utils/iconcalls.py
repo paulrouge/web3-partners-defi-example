@@ -2,19 +2,27 @@ from icon_utils import icon_service, balanced_dex
 from iconsdk.builder.call_builder import CallBuilder
 import json
 
+
+
+
 def print_latest_block():
-    print('\n------------------------------------------------------------------------------------------------------------')
+    print('\n------------ latest block --------------')
     
     block = icon_service.get_block("latest")
     
+    # print all keys and values in block, keys in yellow and values in blue
     for key, value in block.items():
-        # print both, but the key in yellow and the value in blue
         print(f'\033[93m{key}\033[0m: \033[94m{value}\033[0m')
     
-    print('------------------------------------------------------------------------------------------------------------\n')
+    print_line_break()
 
+
+
+
+
+# for example purpose the option for clean_output is set to False initially
 def print_transactions_from_block(block_number, clean_output=False):
-    print('\n------------------------------------------------------------------------------------------------------------')
+    print('\n------------ transactions from block --------------')    
     
     block = icon_service.get_block(block_number)
     
@@ -39,10 +47,13 @@ def print_transactions_from_block(block_number, clean_output=False):
             print('\n')
             print(f'\033[93m{transaction}\033[0m')
     
-    print('------------------------------------------------------------------------------------------------------------\n')
+    print_line_break()
 
 
 
+
+
+# the pool id comes from the balanced smart contract (check the icon tracker to get info about the contract)
 def print_balanced_price(pool_id):
     print('\n------------ price from balanced --------------')
     
@@ -57,6 +68,8 @@ def print_balanced_price(pool_id):
     # Executes a call method to call a read-only API method on the SCORE immediately without creating a transaction on Loopchain
     result = icon_service.call(call)
 
+    # the prints below is for example purpose, you can use the result as you want
+
     # result is now a hex string, that's how it's returned from the blockchain
     print(result)
 
@@ -70,4 +83,11 @@ def print_balanced_price(pool_id):
     # print result as int in yellow
     # print(f'\033[93m{result}\033[0m')
 
-    print('-----------------------------------------------\n')
+    print_line_break()
+
+
+
+
+
+def print_line_break():
+    print('------------------------------------------------------------------------------------------------------------\n')
