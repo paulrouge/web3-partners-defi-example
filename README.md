@@ -5,6 +5,9 @@ Some snippets of code that interact with the Icon blockchain.
 ## What's happening
 - in icon_utils/__init__.py there are some things declared that are used in the other files.
 - in icon_utils/iconcalls.py there are some functions that call the blockchain / a smart contract on the blockchain. 
+- in icon_utils/icontxs.py there are some functions that create and sign transactions.
+
+_note: the code in icon_utils is custom made, it is not part of the icon-sdk_
 
 ## How to use
 - pip install iconsdk
