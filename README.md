@@ -14,6 +14,10 @@ In call.py you can find some examples of how to call the blockchain, at icon_uti
 some examples:
     
 ```python
+    from icon_utils.iconcalls import print_latest_block
+    from icon_utils.iconcalls import print_transactions_from_block
+    from icon_utils.iconcalls import print_balanced_price
+
     print_latest_block()
     print_transactions_from_block(63762860, clean_output=False) # set to True to have cleaner output
 
