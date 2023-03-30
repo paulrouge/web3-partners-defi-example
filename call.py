@@ -5,24 +5,17 @@ from icon_utils.iconcalls import print_balanced_price
 
 # print_latest_block()
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # print_transactions_from_block(63762860, clean_output=False)
 
 # pick pool id from the contract (see tracker link below)
 # print_balanced_price(3)
+
+
+
+
+# HELPERS
+
+# to convert hex-string (the once starting with 0x) to "normal text"
 
 # hex to utf8
 # hexstring = '0x7b226d6574686f64223a225f7374616b65227d'

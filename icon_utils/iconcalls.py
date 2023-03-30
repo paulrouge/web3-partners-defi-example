@@ -3,8 +3,6 @@ from iconsdk.builder.call_builder import CallBuilder
 import json
 
 
-
-
 def print_latest_block():
     print('\n------------ latest block --------------')
     
@@ -17,9 +15,6 @@ def print_latest_block():
     print_line_break()
 
 
-
-
-
 # for example purpose the option for clean_output is set to False initially
 def print_transactions_from_block(block_number, clean_output=False):
     print('\n------------ transactions from block --------------')    
@@ -27,6 +22,7 @@ def print_transactions_from_block(block_number, clean_output=False):
     block = icon_service.get_block(block_number)
     
     for transaction in block['confirmed_transaction_list']:
+        #  if clean_output is set to True, the data is printed in a more readable format
         if clean_output:
             try:
                 # transaction to json format
@@ -45,12 +41,9 @@ def print_transactions_from_block(block_number, clean_output=False):
                 pass
         else:
             print('\n')
-            print(f'\033[93m{transaction}\033[0m')
+            print(f'\033[93m{transaction}\033[0m')    
     
     print_line_break()
-
-
-
 
 
 # the pool id comes from the balanced smart contract (check the icon tracker to get info about the contract)
@@ -68,7 +61,7 @@ def print_balanced_price(pool_id):
     # Executes a call method to call a read-only API method on the SCORE immediately without creating a transaction on Loopchain
     result = icon_service.call(call)
 
-    # the prints below is for example purpose, you can use the result as you want
+    # NOTE: the prints below is for example purpose, you can use the result as you want
 
     # result is now a hex string, that's how it's returned from the blockchain
     print(result)
@@ -84,9 +77,6 @@ def print_balanced_price(pool_id):
     # print(f'\033[93m{result}\033[0m')
 
     print_line_break()
-
-
-
 
 
 def print_line_break():
