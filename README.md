@@ -13,7 +13,7 @@ In call.py you can find some examples of how to call the blockchain, at icon_uti
 
 some examples:
     
-    ```python
+```python
     print_latest_block()
     print_transactions_from_block(63762860, clean_output=False) # set to True to have cleaner output
 
@@ -25,7 +25,7 @@ some examples:
 
     # hexstring = '0x7b226d6574686f64223a225f7374616b65227d' # replace with your hexstring
     # print(bytes.fromhex(hexstring[2:]).decode('utf-8'))
-    ```
+```
 
 - if you want to sign txs place your keystore file in the wallets directory, or
 - create a new keystore file by importing the 'create_new_wallet' function.
@@ -34,7 +34,7 @@ You will be asked a password and a name for the keystore file. The keystore file
 
 If you already have a keystore file, you can load it by importing the 'load_wallet' function.
 
-    ```python
+```python
     from icon_utils.wallets import create_new_wallet
 
     # create new wallet
@@ -42,8 +42,7 @@ If you already have a keystore file, you can load it by importing the 'load_wall
 
     # or load from /wallets folder
     wallet = load_wallet('wallet_name', 'password')
-
-    ```
+```
 
 
 
